@@ -106,3 +106,27 @@ body{
 .triple{
     flex-basis: 73%;
 }
+
+
+.testing{
+
+    backdrop-filter: blur(5.5px);
+    background: rgba(248, 249, 252, 0.445);
+    border: 1px solid rgba(35, 35, 35, 0.01);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    color: #0d2383;
+    flex-basis: 20%;
+    font-family: inherit;
+    font-size: 35px;
+    height: inherit;
+    
+
+}
+
+
+
+.loginButton{
+    align-items: center;
+
+}

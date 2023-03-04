@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        {% load static %}
+        <link rel = "stylesheet" href= "{% static 'Application/style.css' %}" >
+    </head>
+    <body>
+        
+    
+
+
+        <div>
+        <div class = 'testing'>
+            <h1 >Noahs website</h1>
+        
+        <form action="{% url 'Application:userLogin' %}" method="post">
+            {% csrf_token %}
+                <div>
+                    <label for="username"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="username" required>
+                    <label for="password"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="password" required>
+                    <button type="submit">Login</button>
+                    <a href="{% url 'Application:signup' %}">Not a user?</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    </body>
+</html>
