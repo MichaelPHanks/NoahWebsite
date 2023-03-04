@@ -23,7 +23,15 @@ def index(request):
 
     return render(request, 'Application/index.html')
 
-@login_required(login_url='Application:userLogin')
+
+
+def logoutPage(request):
+    logout(request)
+    return redirect(reverse('Application:userLogin'))
+
+
+
+
 def userLogin(request):
     if request.method == "POST":
         username = request.POST['username']
@@ -51,7 +59,7 @@ def signup(request):
         return render(request, 'Application/login.html', {})
     return render(request,'Application/signup.html', {})
 
-
+@login_required(login_url='Application:userLogin')
 def account(request):
     return render(request, "Application/account.html")
 
@@ -59,3 +67,9 @@ def account(request):
 
 def redirectTest(request):
     return redirect(reverse('Application:index'))
+
+
+
+
+def aboutUs(request):
+    return render(request,'Application/aboutUs.html')
